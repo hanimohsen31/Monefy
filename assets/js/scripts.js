@@ -2,6 +2,23 @@ let Total = 0;
 var xValues = [];
 var yValues = [];
 var barColors = [];
+const month = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+const d = new Date();
+let monthName = month[d.getMonth()];
+document.querySelector("#month").innerText = monthName;
 
 let AllVars = [
   {
@@ -100,13 +117,15 @@ for (i = 0; i < AllVars.length; i++) {
   barColors.push(AllVars[i].color);
   document.querySelector(AllVars[i].class).style.color = AllVars[i].color;
   // Total += AllVars[i].value;
-  document.querySelector(`.${AllVars[i].title}`).innerText = ((+AllVars[i].value / Total) * 100).toFixed() + "%";
+  document.querySelector(`.${AllVars[i].title}`).innerText =
+    ((+AllVars[i].value / Total) * 100).toFixed() + "%";
   if (AllVars[i].value < 1) {
-    document.querySelector(`.${AllVars[i].title}`).style.visibility = "hidden"
+    document.querySelector(`.${AllVars[i].title}`).style.visibility = "hidden";
   }
 }
 
 document.getElementById("balance").innerText = Total;
+
 new Chart("myChart", {
   type: "doughnut",
   data: {
