@@ -21,7 +21,8 @@ body nav {
   height: 9vh !important;
 }
 
-body .formPanel {
+body .formPanelAdd,
+body .formPanelDelete {
   width: 100vw;
   height: 100vh;
   background-color: #000000d6;
@@ -47,7 +48,10 @@ body .formPanel {
 }
 
 body .icons {
-  height: calc(80vh - 56px);
+  display: none !important;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
   background-color: crimson;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -62,7 +66,6 @@ body .icons {
   position: absolute;
   left: 0;
   padding: 20px 15px;
-  width: 150px;
 }
 
 body .icons .subject {
@@ -75,9 +78,9 @@ body .icons .subject {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -90,6 +93,10 @@ body .icons .subject svg {
 body .icons .subject h6 {
   color: white;
   margin: auto 5px auto 10px;
+}
+
+body .icons .subject span {
+  color: white;
 }
 
 body h3 {
@@ -112,7 +119,27 @@ body .curt {
   justify-items: center;
 }
 
-body .curt svg {
+body .curt div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .curt div span {
+  margin-top: 5px;
+}
+
+body .curt div svg {
   font-size: 30px;
 }
 

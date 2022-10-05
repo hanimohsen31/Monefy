@@ -27,13 +27,11 @@ body {
         height: 9vh !important;
     }
 
-    .formPanel {
+    .formPanelAdd,
+    .formPanelDelete {
         width: 100vw;
         height: 100vh;
         background-color: #000000d6;
-        // opacity: .7;
-        // position: absolute;
-        // z-index: 50;
         bottom: 0;
         position: absolute;
         z-index: 100;
@@ -43,11 +41,13 @@ body {
         justify-content: center;
         align-items: center;
         text-align: center;
-        // top: 40%;
         display: none;
     }
     .icons {
-        height: calc(80vh - 56px);
+        display: none !important;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
         background-color: crimson;
         display: flex;
         flex-direction: column;
@@ -56,13 +56,12 @@ body {
         position: absolute;
         left: 0;
         padding: 20px 15px;
-        width: 150px;
         .subject {
             margin-top: 5px;
             margin-bottom: 5px;
             display: flex;
             flex-direction: row;
-            justify-content: flex-start;
+            justify-content: space-between;
             align-items: center;
             svg {
                 color: white;
@@ -71,6 +70,9 @@ body {
                 color: white;
                 margin: auto 5px auto 10px;
             }
+            span{
+                color: white;
+            }
         }
     }
     h3 {
@@ -78,17 +80,24 @@ body {
         margin: 5px auto;
     }
     .curt {
+
         display: grid;
-        // margin-left: 150px;
-        // padding-right: 150px;
         grid-template-columns: repeat(4, 1fr);
         height: 53vh;
-        // margin-top: 56px;
         justify-content: center;
         align-items: center;
         justify-items: center;
-        svg {
-            font-size: 30px;
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            span{
+                margin-top: 5px;
+            }
+            svg {
+                font-size: 30px;
+            }
         }
     }
     .balance {
@@ -106,12 +115,10 @@ body {
     footer {
         height: 24vh;
         background-color: $mainColor;
-        // background-color: crimson;
         display: flex;
         justify-content: space-around;
         align-items: center;
         .borderRounded {
-            // border: 10px solid black;
             border-radius: 50%;
             padding: 45px;
             height: 45px;
@@ -155,6 +162,6 @@ body {
     }
 }
 
-.alert{
+.alert {
     display: none;
 }
