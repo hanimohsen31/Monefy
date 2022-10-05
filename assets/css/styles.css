@@ -8,7 +8,7 @@ html {
   overflow: hidden;
 }
 
-body {
+html body {
   padding: 0;
   margin: 0;
   overflow: hidden;
@@ -16,13 +16,36 @@ body {
   position: relative;
 }
 
-body nav {
+html body nav {
   background-color: #7ac793 !important;
   height: 9vh !important;
 }
 
-body .formPanelAdd,
-body .formPanelDelete {
+html body nav .container-fluid .navbar-toggler .navbar-toggler-icon {
+  background-image: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body nav .container-fluid .navbar-toggler .navbar-toggler-icon svg {
+  color: white;
+}
+
+html body nav .container-fluid .navbar-toggler:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+html body .formPanelAdd,
+html body .formPanelDelete {
   width: 100vw;
   height: 100vh;
   background-color: #000000d6;
@@ -47,7 +70,12 @@ body .formPanelDelete {
   display: none;
 }
 
-body .icons {
+html body .formPanelAdd .alert,
+html body .formPanelDelete .alert {
+  display: none;
+}
+
+html body .icons {
   display: none !important;
   height: 100vh;
   width: 100vw;
@@ -68,7 +96,7 @@ body .icons {
   padding: 20px 15px;
 }
 
-body .icons .subject {
+html body .icons .subject {
   margin-top: 5px;
   margin-bottom: 5px;
   display: -webkit-box;
@@ -86,25 +114,25 @@ body .icons .subject {
           align-items: center;
 }
 
-body .icons .subject svg {
+html body .icons .subject svg {
   color: white;
 }
 
-body .icons .subject h6 {
+html body .icons .subject h6 {
   color: white;
   margin: auto 5px auto 10px;
 }
 
-body .icons .subject span {
+html body .icons .subject span {
   color: white;
 }
 
-body h3 {
+html body h3 {
   color: #73d298;
   margin: 5px auto;
 }
 
-body .curt {
+html body .curt {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -119,7 +147,7 @@ body .curt {
   justify-items: center;
 }
 
-body .curt div {
+html body .curt div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,15 +163,15 @@ body .curt div {
           align-items: center;
 }
 
-body .curt div span {
+html body .curt div span {
   margin-top: 5px;
 }
 
-body .curt div svg {
+html body .curt div svg {
   font-size: 30px;
 }
 
-body .balance button {
+html body .balance button {
   background-color: #f78384;
   color: white;
   border: none;
@@ -154,7 +182,7 @@ body .balance button {
   padding-bottom: 4px;
 }
 
-body footer {
+html body footer {
   height: 24vh;
   background-color: #f2fff6;
   display: -webkit-box;
@@ -167,7 +195,7 @@ body footer {
           align-items: center;
 }
 
-body footer .borderRounded {
+html body footer .borderRounded {
   border-radius: 50%;
   padding: 45px;
   height: 45px;
@@ -184,50 +212,23 @@ body footer .borderRounded {
   background-color: white;
 }
 
-body footer .borderRounded .fa-minus {
+html body footer .borderRounded .fa-minus {
   font-size: 30px;
   font-weight: bold;
   color: #f78384;
 }
 
-body footer .borderRounded .fa-plus {
+html body footer .borderRounded .fa-plus {
   font-size: 30px;
   font-weight: bold;
   color: #73d298;
 }
 
-body footer .minus {
+html body footer .minus {
   border: 10px solid #f78384;
 }
 
-body footer .plus {
+html body footer .plus {
   border: 10px solid #73d298;
-}
-
-.navbar-toggler-icon {
-  background-image: none;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.navbar-toggler-icon svg {
-  color: white;
-}
-
-.navbar-toggler:focus {
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-}
-
-.alert {
-  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

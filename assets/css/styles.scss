@@ -11,157 +11,160 @@ $color5: #df9f17;
     box-sizing: border-box;
     font-family: "Handlee", cursive;
 }
-
 html {
     overflow: hidden;
-}
-body {
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    background-color: $mainColor;
-    position: relative;
-
-    nav {
-        background-color: #7ac793 !important;
-        height: 9vh !important;
-    }
-
-    .formPanelAdd,
-    .formPanelDelete {
-        width: 100vw;
-        height: 100vh;
-        background-color: #000000d6;
-        bottom: 0;
-        position: absolute;
-        z-index: 100;
-        display: flex;
-        flex-direction: column !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        display: none;
-    }
-    .icons {
-        display: none !important;
-        height: 100vh;
-        width: 100vw;
-        top: 0;
-        background-color: crimson;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        // align-items: center;
-        position: absolute;
-        left: 0;
-        padding: 20px 15px;
-        .subject {
-            margin-top: 5px;
-            margin-bottom: 5px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            svg {
-                color: white;
-            }
-            h6 {
-                color: white;
-                margin: auto 5px auto 10px;
-            }
-            span{
-                color: white;
+    body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        background-color: $mainColor;
+        position: relative;
+        // NAvbar
+        nav {
+            background-color: #7ac793 !important;
+            height: 9vh !important;
+            .container-fluid {
+                .navbar-toggler {
+                    .navbar-toggler-icon {
+                        background-image: none;
+                        padding: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        svg {
+                            color: white;
+                        }
+                    }
+                    &:focus {
+                        box-shadow: none !important;
+                    }
+                }
             }
         }
-    }
-    h3 {
-        color: $secColor;
-        margin: 5px auto;
-    }
-    .curt {
-
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        height: 53vh;
-        justify-content: center;
-        align-items: center;
-        justify-items: center;
-        div{
+        // Forms Add + Delete
+        .formPanelAdd,
+        .formPanelDelete {
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000d6;
+            bottom: 0;
+            position: absolute;
+            z-index: 100;
+            display: flex;
+            flex-direction: column !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: none;
+            .alert {
+                display: none;
+            }
+        }
+        // SideBar Icons and Slider
+        .icons {
+            display: none !important;
+            height: 100vh;
+            width: 100vw;
+            top: 0;
+            background-color: crimson;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            span{
+            justify-content: space-between;
+            position: absolute;
+            left: 0;
+            padding: 20px 15px;
+            .subject {
                 margin-top: 5px;
-            }
-            svg {
-                font-size: 30px;
+                margin-bottom: 5px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                svg {
+                    color: white;
+                }
+                h6 {
+                    color: white;
+                    margin: auto 5px auto 10px;
+                }
+                span {
+                    color: white;
+                }
             }
         }
-    }
-    .balance {
-        button {
-            background-color: $thirdColor;
-            color: white;
-            border: none;
-            outline: none;
-            border-radius: 5px;
-            height: 100%;
-            padding-top: 4px;
-            padding-bottom: 4px;
+        // Month
+        h3 {
+            color: $secColor;
+            margin: 5px auto;
         }
-    }
-    footer {
-        height: 24vh;
-        background-color: $mainColor;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        .borderRounded {
-            border-radius: 50%;
-            padding: 45px;
-            height: 45px;
-            width: 45px;
-            display: flex;
+        // Container of Chart
+        .curt {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            height: 53vh;
             justify-content: center;
             align-items: center;
-            background-color: white;
-            .fa-minus {
-                font-size: 30px;
-                font-weight: bold;
-                color: $thirdColor;
+            justify-items: center;
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                span {
+                    margin-top: 5px;
+                }
+                svg {
+                    font-size: 30px;
+                }
             }
-            .fa-plus {
-                font-size: 30px;
-                font-weight: bold;
-                color: $secColor;
+        }
+        // Balcance Button
+        .balance {
+            button {
+                background-color: $thirdColor;
+                color: white;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                height: 100%;
+                padding-top: 4px;
+                padding-bottom: 4px;
             }
         }
-        .minus {
-            border: 10px solid $thirdColor;
+        // Footer
+        footer {
+            height: 24vh;
+            background-color: $mainColor;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .borderRounded {
+                border-radius: 50%;
+                padding: 45px;
+                height: 45px;
+                width: 45px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                .fa-minus {
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: $thirdColor;
+                }
+                .fa-plus {
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: $secColor;
+                }
+            }
+            .minus {
+                border: 10px solid $thirdColor;
+            }
+            .plus {
+                border: 10px solid $secColor;
+            }
         }
-        .plus {
-            border: 10px solid $secColor;
-        }
     }
-}
-.navbar-toggler-icon {
-    background-image: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    svg {
-        color: white;
-    }
-}
-.navbar-toggler {
-    &:focus {
-        box-shadow: none !important;
-    }
-}
-
-.alert {
-    display: none;
 }
